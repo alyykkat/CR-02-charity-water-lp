@@ -1,3 +1,80 @@
+/* Style for the water droplet icon next to buttons */
+.water-drop {
+  display: inline-block;
+  margin-left: 3px; /* Move droplet closer to text */
+  vertical-align: 2px; /* Move droplet higher to align with text */
+}
+/* Slim and center the call-to-action section */
+.call-to-action {
+  max-width: 400px; /* Makes the box slimmer */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* Header styles to make it box-like and align items */
+.site-header {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 24px 10px 0 10px;
+  padding: 16px 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2E9DF7;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-nav a:hover {
+  background: #f4f8fb;
+}
+
+/* Give button styles */
+.give-button {
+  background-color: #77a8bb;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  margin-left: 18px;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.give-button:hover {
+  background-color: #003366;
+  color: #fff7e1;
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -25,11 +102,13 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  /* Add background image to the whole site */
+  background: url('img/eutah-mizushima-OWwK_0_EnxY-unsplash.jpg') center/cover no-repeat fixed;
+  /* Use Avenir for all text. If not available, use Arial or a generic sans-serif font. */
+  font-family: 'Avenir', Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
-  color: #222;
+  color: #1a1a1a;
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
@@ -43,21 +122,11 @@ section {
 
 /* Hero Section Styles */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background: #cbccd1;
+  color: #1a1a1a; /* Black for boldness */
+  text-align: center; /* Center the text */
+  padding: 60px 20px; /* Add space above and below */
+  border-radius: 12px;
 }
 
 /* Make the headline bold and modern */
@@ -86,17 +155,19 @@ section {
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #003366; /* Dark Blue */
   margin-top: 0;
   font-weight: bold;
 }
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
+  background-color: #fff7e1;
+  color: #1a1a1a; /* Dark text for contrast */
   text-align: center;
   padding: 30px 20px;
+  border-radius: 12px;
+}
 }
 
 /* Style the impact story image */
@@ -111,24 +182,24 @@ h2 {
 /* Donate Button Styles */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
+  background-color: #77a8bb;
+  color: #003366;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
   border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  margin-top: 18px;
+  text-decoration: none;
+  transition: background 0.2s;
   cursor: pointer;
+  font-size: 1.1em;
+  box-shadow: none;
 }
 
-/* Change button color when hovered */
+/* Change donate button color when hovered to match Give button */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+  background-color: #003366;
+  color: #fff7e1;
 }
 
 /* Add some spacing between sections */
