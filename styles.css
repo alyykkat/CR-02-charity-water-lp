@@ -13,7 +13,7 @@
 }
 /* Header styles to make it box-like and align items */
 .site-header {
-  background: #fff;
+  background: #fff7e1; /* Changed to light yellow as requested */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
   margin: 24px 10px 0 10px;
@@ -47,7 +47,7 @@
 
 .main-nav a {
   text-decoration: none;
-  color: #222;
+  color: #1a1a1a;
   font-weight: 500;
   padding: 6px 12px;
   border-radius: 6px;
@@ -55,7 +55,8 @@
 }
 
 .main-nav a:hover {
-  background: #f4f8fb;
+  background: #003366;
+  color: #fff7e1; 
 }
 
 /* Give button styles */
@@ -123,25 +124,69 @@ section {
 /* Hero Section Styles */
 .hero {
   background: #cbccd1;
-  color: #1a1a1a; /* Black for boldness */
-  text-align: center; /* Center the text */
-  padding: 60px 20px; /* Add space above and below */
+  color: #1a1a1a;
+  text-align: left;
+  padding: 40px 20px;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Shift content to the left */
+  gap: 0; /* Remove gap so image and text are as close as possible */
+  max-width: 950px; /* Increased width for a larger hero box */
+  margin-left: auto; /* Center the box horizontally */
+  margin-right: auto;
+}
+
+/* Container for hero text to keep it together */
+.hero-text {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px; /* Reduce space between headline and subheadline */
+}
+
+/* Style for the hero image */
+.hero-image {
+  max-width: 180px; /* Slightly smaller for balance */
+  min-width: 90px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  margin-right: 16px; /* Add a little space between image and text */
+  margin-left: 0; /* Remove extra margin */
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column; /* Stack text and image on small screens */
+    text-align: center;
+    gap: 12px;
+  }
+  .hero-image {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  .hero-text {
+    width: 100%;
+  }
 }
 
 /* Make the headline bold and modern */
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 2.2em; /* Slightly smaller for balance */
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 4px; /* Less space below headline */
+  margin-top: 0;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
 }
 
 /* Style the subheadline */
 .hero p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 0;
+  margin-bottom: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
